@@ -1,0 +1,43 @@
+{
+  "name": "NOVA MIND AI",
+  "short_name": "NOVA MIND AI",
+  "description": "A cross-platform AI operating workspace with chat, approval-first agents, and autonomous delivery.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "categories": ["productivity", "utilities", "developer"],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Chat Assistant",
+      "short_name": "Chat",
+      "url": "/?panel=workspace&mode=chat"
+    },
+    {
+      "name": "Agent Mode",
+      "short_name": "Agent",
+      "url": "/?panel=agents&mode=agent"
+    },
+    {
+      "name": "Super Agent",
+      "short_name": "Super",
+      "url": "/?panel=agents&mode=super_agent"
+    }
+  ]
+}

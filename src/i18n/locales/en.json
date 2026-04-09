@@ -1,0 +1,76 @@
+{
+  "brand": "NOVA MIND AI",
+  "tagline": "Think Beyond. Act Smart.",
+  "nav": {
+    "features": "Features",
+    "pricing": "Pricing",
+    "login": "Login",
+    "signup": "Get Started"
+  },
+  "hero": {
+    "badge": "Powered by Claude AI",
+    "title": "The Most Powerful AI Assistant",
+    "subtitle": "Chat in any language. Get intelligent answers instantly. Built for the world.",
+    "cta": "Start for Free",
+    "demo": "See Demo"
+  },
+  "features": {
+    "title": "Everything you need. Nothing you don't.",
+    "multilang": { "title": "Multi-Language", "desc": "Chat in Bangla, English, Arabic, Hindi, and 10+ languages natively." },
+    "smart": { "title": "Ultra Smart", "desc": "Powered by Claude — one of the world's most advanced AI models." },
+    "fast": { "title": "Lightning Fast", "desc": "Real-time streaming responses. No waiting, no delays." },
+    "secure": { "title": "Secure & Private", "desc": "Enterprise-grade security. Your data stays yours." },
+    "history": { "title": "Chat History", "desc": "All your conversations saved, searchable, and organized." },
+    "api": { "title": "API Access", "desc": "Integrate NOVA MIND AI directly into your applications." }
+  },
+  "pricing": {
+    "title": "Simple, Transparent Pricing",
+    "subtitle": "Choose the plan that works for you. Upgrade or cancel anytime.",
+    "free": { "name": "Free", "price": "0", "period": "/month", "cta": "Get Started" },
+    "pro": { "name": "Pro", "price": "200", "period": "/month", "cta": "Go Pro", "badge": "Most Popular" },
+    "enterprise": { "name": "Enterprise", "price": "250", "period": "/month", "cta": "Go Enterprise" }
+  },
+  "auth": {
+    "login": "Sign In",
+    "signup": "Create Account",
+    "email": "Email address",
+    "password": "Password",
+    "name": "Full name",
+    "confirmPassword": "Confirm password",
+    "forgotPassword": "Forgot password?",
+    "noAccount": "Don't have an account?",
+    "haveAccount": "Already have an account?",
+    "loggingIn": "Signing in...",
+    "registering": "Creating account..."
+  },
+  "chat": {
+    "newChat": "New Chat",
+    "placeholder": "Ask me anything...",
+    "send": "Send",
+    "thinking": "NOVA MIND is thinking...",
+    "noConversations": "No conversations yet",
+    "startChat": "Start a new conversation",
+    "deleteConfirm": "Delete this conversation?",
+    "limitReached": "Monthly message limit reached. Please upgrade your plan.",
+    "conversations": "Conversations"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome back",
+    "stats": {
+      "totalChats": "Total Chats",
+      "messagesUsed": "Messages Used",
+      "plan": "Current Plan"
+    },
+    "upgrade": "Upgrade Plan"
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "success": "Success!"
+  }
+}

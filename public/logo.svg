@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <radialGradient id="coreGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(256 256) rotate(90) scale(132)">
+      <stop stop-color="#E0F2FE" stop-opacity="0.42"/>
+      <stop offset="0.42" stop-color="#60A5FA" stop-opacity="0.24"/>
+      <stop offset="0.78" stop-color="#A78BFA" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#A78BFA" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="haloGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(256 256) rotate(90) scale(178)">
+      <stop stop-color="#7DD3FC" stop-opacity="0.18"/>
+      <stop offset="0.52" stop-color="#60A5FA" stop-opacity="0.1"/>
+      <stop offset="0.82" stop-color="#C4B5FD" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#C4B5FD" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="orbitA" x1="82" y1="256" x2="430" y2="256" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#60A5FA" stop-opacity="0.12"/>
+      <stop offset="0.5" stop-color="#E2E8F0" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0.18"/>
+    </linearGradient>
+    <linearGradient id="orbitB" x1="112" y1="256" x2="400" y2="256" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A78BFA" stop-opacity="0.12"/>
+      <stop offset="0.5" stop-color="#7DD3FC" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#C4B5FD" stop-opacity="0.14"/>
+    </linearGradient>
+    <linearGradient id="orbitC" x1="68" y1="256" x2="444" y2="256" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7DD3FC" stop-opacity="0.08"/>
+      <stop offset="0.45" stop-color="#BFDBFE" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#A78BFA" stop-opacity="0.14"/>
+    </linearGradient>
+    <filter id="coreBlur" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+    <filter id="haloBlur" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="particleBlur" x="-300%" y="-300%" width="700%" height="700%">
+      <feGaussianBlur stdDeviation="2.4"/>
+    </filter>
+    <filter id="logoShadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#020617" flood-opacity="0.22"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="14" flood-color="#60A5FA" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes orbitRotate {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes orbitRotateReverse {
+      from {
+        transform: rotate(360deg);
+      }
+
+      to {
+        transform: rotate(0deg);
+      }
+    }
+
+    @keyframes corePulse {
+      0%,
+      100% {
+        opacity: 0.4;
+        transform: scale(0.97);
+      }
+
+      50% {
+        opacity: 0.76;
+        transform: scale(1.03);
+      }
+    }
+
+    @keyframes haloPulse {
+      0%,
+      100% {
+        opacity: 0.2;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.42;
+        transform: scale(1.04);
+      }
+    }
+
+    @keyframes particleFloatA {
+      0%,
+      100% {
+        opacity: 0.18;
+        transform: translate(0, 0) scale(1);
+      }
+
+      50% {
+        opacity: 0.54;
+        transform: translate(0, -7px) scale(1.08);
+      }
+    }
+
+    @keyframes particleFloatB {
+      0%,
+      100% {
+        opacity: 0.14;
+        transform: translate(0, 0) scale(1);
+      }
+
+      50% {
+        opacity: 0.44;
+        transform: translate(6px, 6px) scale(1.12);
+      }
+    }
+
+    .orbit-a,
+    .orbit-b,
+    .core-pulse,
+    .halo-pulse {
+      transform-origin: 256px 256px;
+    }
+
+    .orbit-a {
+      animation: orbitRotate 12s linear infinite;
+    }
+
+    .orbit-b {
+      animation: orbitRotateReverse 9s linear infinite;
+    }
+
+    .core-pulse {
+      animation: corePulse 8s ease-in-out infinite;
+    }
+
+    .halo-pulse {
+      animation: haloPulse 10s ease-in-out infinite;
+    }
+
+    .particle-a {
+      animation: particleFloatA 7.2s ease-in-out infinite;
+    }
+
+    .particle-b {
+      animation: particleFloatB 9.4s ease-in-out infinite -1.6s;
+    }
+
+    .particle-c {
+      animation: particleFloatA 8.8s ease-in-out infinite -2.4s;
+    }
+
+    .particle-d {
+      animation: particleFloatB 10.6s ease-in-out infinite -3.1s;
+    }
+  </style>
+
+  <g class="halo-pulse" filter="url(#haloBlur)">
+    <circle cx="256" cy="256" r="174" fill="url(#haloGlow)"/>
+  </g>
+
+  <g class="core-pulse" filter="url(#coreBlur)">
+    <circle cx="256" cy="256" r="126" fill="url(#coreGlow)"/>
+  </g>
+
+  <g class="orbit-a" opacity="0.78">
+    <ellipse cx="256" cy="256" rx="174" ry="162" stroke="url(#orbitA)" stroke-width="1.25"/>
+    <ellipse cx="256" cy="256" rx="146" ry="188" stroke="url(#orbitB)" stroke-width="1.1" stroke-dasharray="6 12" transform="rotate(32 256 256)"/>
+    <circle cx="256" cy="94" r="4" fill="#7DD3FC"/>
+    <circle cx="388" cy="310" r="3.75" fill="#C4B5FD"/>
+  </g>
+
+  <g class="orbit-b" opacity="0.64">
+    <ellipse cx="256" cy="256" rx="188" ry="148" stroke="url(#orbitC)" stroke-width="1.05" stroke-dasharray="4 14" transform="rotate(-20 256 256)"/>
+    <circle cx="122" cy="226" r="3.5" fill="#93C5FD"/>
+    <circle cx="314" cy="420" r="4" fill="#67E8F9"/>
+  </g>
+
+  <g filter="url(#particleBlur)">
+    <circle class="particle-a" cx="96" cy="162" r="5.5" fill="#7DD3FC"/>
+    <circle class="particle-b" cx="418" cy="144" r="4.5" fill="#C4B5FD"/>
+    <circle class="particle-c" cx="404" cy="378" r="5" fill="#67E8F9"/>
+    <circle class="particle-d" cx="118" cy="382" r="4.25" fill="#BFDBFE"/>
+  </g>
+
+  <circle cx="256" cy="256" r="118" stroke="#E2E8F0" stroke-opacity="0.08" stroke-width="1"/>
+
+  <g filter="url(#logoShadow)">
+    <image x="86" y="86" width="340" height="340" href="/logo.png" preserveAspectRatio="xMidYMid meet"/>
+  </g>
+</svg>
